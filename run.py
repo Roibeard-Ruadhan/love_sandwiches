@@ -52,7 +52,7 @@ def validate_data(values):
         print(f"Invalid data: {e}, please try again.\n")
         return False
 
-     return True
+    return True
 
 #Code comment out below as it has been improved to include both functions on line 77
 
