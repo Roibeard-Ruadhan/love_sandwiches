@@ -12,6 +12,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('love_sandwiches')
 
+
 def get_sales_data():
     """
     Get sales figures input from the user.
@@ -53,29 +54,8 @@ def validate_data(values):
 
     return True
 
-#Code comment out below as it has been improved to include both functions on line 77
-
-#def update_sales_worksheet(data):
-    """
-    Update sales worksheet, add new row with the list data provided
-    """
-#    print("Updating sales worksheet...\n")
- #   sales_worksheet = SHEET.worksheet("sales")
-  #  sales_worksheet.append_row(data)
-   # print("Sales worksheet updated successfully.\n")
-
-
-#def update_surplus_worksheet(data):
-    """
-    Update surplus worksheet, add new row with the list data provided
-    """
-#    print("Updating surplus worksheet...\n")
- #   surplus_worksheet = SHEET.worksheet("surplus")
-  #  surplus_worksheet.append_row(data)
-   # print("Surplus worksheet updated successfully.\n")
 
 def update_worksheet(data, worksheet):
-
     """
     Receives a list of integers to be inserted into a worksheet
     Update the relevant worksheet with the data provided
